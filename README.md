@@ -1,6 +1,6 @@
 # CryptoES
 
-*A cryptography algorithms library compatible with ES6 and TypeScript*
+*A cryptography algorithms library compatible with CommonJS, ES6 and TypeScript*
 
 - Inspired by and has the same API with [CryptoJS](https://code.google.com/archive/p/crypto-js/) 
 - With types for TypeScript usage

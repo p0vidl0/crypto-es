@@ -1,7 +1,7 @@
 {
-  "name": "crypto-es",
+  "name": "crypto-ujs",
   "version": "1.2.7",
-  "description": "A cryptography algorithms library compatible with ES6 and TypeScript",
+  "description": "A cryptography algorithms library compatible with CommonJS,  ES6 and TypeScript",
   "keywords": [
     "typescript",
     "security",
@@ -51,7 +51,12 @@
     "debug": "node --experimental-modules __tests__/debug.js",
     "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "postbuild": "node post-build.js",
-    "lint": "eslint \"src/**/*.js\" --cache --max-warnings 0"
+    "lint": "eslint \"src/**/*.js\" --cache --max-warnings 0",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm test",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
