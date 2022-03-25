@@ -1,5 +1,5 @@
 {
-  "name": "crypto-ujs",
+  "name": "@p0vidl0/crypto-js",
   "version": "2.0.1",
   "description": "A cryptography algorithms library compatible with CommonJS,  ES6 and TypeScript",
   "keywords": [
@@ -44,7 +44,7 @@
   },
   "types": "src/index.d.ts",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
