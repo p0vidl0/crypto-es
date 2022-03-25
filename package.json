@@ -1,6 +1,6 @@
 {
   "name": "@p0vidl0/crypto-js",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A cryptography algorithms library compatible with CommonJS,  ES6 and TypeScript",
   "keywords": [
     "typescript",
