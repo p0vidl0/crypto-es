@@ -1,8 +1,8 @@
-import CryptoES from '../lib';
+import CryptoES from '../src';
 
-import { MD5 } from '../lib/md5';
+import { MD5 } from '../src/md5';
 
-import { AES } from '../lib/aes';
+import { AES } from '../src/aes';
 
 const t1: CryptoES.lib.Base = new CryptoES.lib.Base();
 

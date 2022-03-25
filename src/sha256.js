@@ -19,7 +19,7 @@ const isPrime = (n) => {
   return true;
 };
 
-const getFractionalBits = n => ((n - (n | 0)) * 0x100000000) | 0;
+const getFractionalBits = (n) => ((n - (n | 0)) * 0x100000000) | 0;
 
 let n = 2;
 let nPrime = 0;

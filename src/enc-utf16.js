@@ -2,7 +2,7 @@ import {
   WordArray,
 } from './core.js';
 
-const swapEndian = word => ((word << 8) & 0xff00ff00) | ((word >>> 8) & 0x00ff00ff);
+const swapEndian = (word) => ((word << 8) & 0xff00ff00) | ((word >>> 8) & 0x00ff00ff);
 
 /**
  * UTF-16 BE encoding strategy.

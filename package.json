@@ -34,30 +34,41 @@
     "Base64"
   ],
   "type": "module",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "types": "src/index.d.ts",
   "files": [
-    "lib"
+    "src"
   ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "debug": "node --experimental-modules __tests__/debug.js"
+    "debug": "node --experimental-modules __tests__/debug.js",
+    "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "postbuild": "node post-build.js",
+    "lint": "eslint \"src/**/*.js\" --cache --max-warnings 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/entronad/crypto-es.git"
+    "url": "git+https://github.com/p0vidl0/crypto-es.git"
   },
-  "author": "LIN Chen",
+  "author": "Alex Kalashnikov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/entronad/crypto-es/issues"
+    "url": "https://github.com/p0vidl0/crypto-es/issues"
   },
-  "homepage": "https://github.com/entronad/crypto-es#readme",
+  "homepage": "https://github.com/p0vidl0/crypto-es#readme",
   "devDependencies": {
     "eslint": "8.8.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.25.4",
-    "jest": "27.4.7"
+    "jest": "27.4.7",
+    "typescript": "^4.6.3"
   },
   "jest": {
     "testRegex": "(/__tests__/.*\\.test\\.js)$",

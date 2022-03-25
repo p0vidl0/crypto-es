@@ -425,13 +425,7 @@ export class BlockCipher extends Cipher {
      * @property {Mode} mode The block mode to use. Default: CBC
      * @property {Padding} padding The padding strategy to use. Default: Pkcs7
      */
-    super(xformMode, key, Object.assign(
-      {
-        mode: CBC,
-        padding: Pkcs7,
-      },
-      cfg,
-    ));
+    super(xformMode, key, { mode: CBC, padding: Pkcs7, ...cfg });
 
     this.blockSize = 128 / 32;
   }

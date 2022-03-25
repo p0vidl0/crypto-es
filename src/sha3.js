@@ -14,7 +14,7 @@ const ROUND_CONSTANTS = [];
 let _x = 1;
 let _y = 0;
 for (let t = 0; t < 24; t += 1) {
-  RHO_OFFSETS[_x + 5 * _y] = ((t + 1) * (t + 2) / 2) % 64;
+  RHO_OFFSETS[_x + 5 * _y] = (((t + 1) * (t + 2)) / 2) % 64;
 
   const newX = _y % 5;
   const newY = (2 * _x + 3 * _y) % 5;
@@ -76,10 +76,7 @@ export class SHA3Algo extends Hasher {
      *   Only values permitted are: 224, 256, 384, 512.
      *   Default: 512
      */
-    super(Object.assign(
-      { outputLength: 512 },
-      cfg,
-    ));
+    super({ outputLength: 512, ...cfg });
   }
 
   _doReset() {

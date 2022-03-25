@@ -1,4 +1,4 @@
-import C from '../lib/index.js';
+import C from '../src/index.js';
 
 const data = {};
 

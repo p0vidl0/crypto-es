@@ -2,3 +2,5 @@
 node_modules
 yarn-error.log
 p42.toml
+pnpm-lock.yaml
+.eslintcache
