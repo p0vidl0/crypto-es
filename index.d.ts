@@ -1,4 +1,4 @@
-declare namespace CryptoES {
+declare namespace CryptoJS {
   namespace lib {
     /**
      * Base class for inheritance.
@@ -211,7 +211,7 @@ declare namespace CryptoES {
     interface HasherCfg {
 
       // SHA3
-  
+
       outputLength?: number
     }
 
@@ -301,19 +301,19 @@ declare namespace CryptoES {
     interface CipherCfg {
 
       // Cipher
-  
+
       iv?: lib.WordArray;
       mode?: Function;
       padding?: pad.Padding;
-  
+
       // SerializableCipher
-  
+
       format?: format.Format;
-  
+
       // PasswordBasedCipher
-  
+
       kdf?: kdf.Kdf;
-    }  
+    }
 
     /**
      * Abstract base cipher template.
@@ -504,7 +504,7 @@ declare namespace CryptoES {
      *    The number of 32-bit words this cipher operates on. Default: 4 (128 bits)
      */
     export class BlockCipher extends Cipher {
-      static create(xformMode?: number, key?: WordArray, cfg?: CipherCfg): BlockCipher;    
+      static create(xformMode?: number, key?: WordArray, cfg?: CipherCfg): BlockCipher;
     }
 
     interface CipherParamsCfg {
