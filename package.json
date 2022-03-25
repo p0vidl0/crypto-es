@@ -1,6 +1,6 @@
 {
   "name": "crypto-ujs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A cryptography algorithms library compatible with CommonJS,  ES6 and TypeScript",
   "keywords": [
     "typescript",
