@@ -42,7 +42,7 @@
       "require": "./dist/cjs/index.js"
     }
   },
-  "types": "src/index.d.ts",
+  "types": "index.d.ts",
   "files": [
     "dist"
   ],
